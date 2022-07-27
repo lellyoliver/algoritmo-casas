@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "code": 6064,
+        "transition": "Venda",
+        "category": "Casa",
+        "adress": "Parque São Francisco - Itatiba, São Paulo",
+        "room": 3,
+        "suite": 0,
+        "bathroom": 1,
+        "garage": 2,
+        "price": "R$215.000,00",
+        "title": "Travessa Alexandre Rossi",
+        "areaTotal": 132,
+        "areaBuit": 51,
+        "urlImage": "#",
+        "urlLink": "https://www.liveresidence.com.br/6064/imoveis/venda-casa-3-dormitorios-parque-sao-francisco-itatiba-sp",
+        "tag": [
+            "ouvir musica alta",
+            "perto de avenidas movimentadas",
+            "primeira residencia",
+            "localizacao",
+            "espaco para exercitar",
+            "pracas proximas"
+        ]
+    },
+    {
+        "id": 2,
+        "code": 2864,
+        "transition": "Venda",
+        "category": "Casa",
+        "adress": "Teste",
+        "room": 2,
+        "suite": 0,
+        "bathroom": 2,
+        "garage": 2,
+        "price": "R$240.000,00",
+        "title": "Teste",
+        "areaTotal": 100,
+        "areaBuit": 60,
+        "urlImage": "#",
+        "urlLink": "https://www.liveresidence.com.br/5271/imoveis/venda-casa-2-dormitorios-parque-sao-francisco-itatiba-sp",
+        "tag": [
+            "ouvir musica alta",
+            "perto de avenidas movimentadas",
+            "espaco para recreacao em familia",
+            "moradores proximos",
+            "animais de estimacao",
+            "lugar calmo e tranquilo",
+            "espaco para exercitar"
+        ]
+    }
+]

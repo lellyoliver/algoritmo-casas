@@ -1,0 +1,58 @@
+/**
+ * perfis
+ * 
+ * 1) Novos casais -> 30 a 40
+ * Eles começam a busca por imóveis com espaços maiores, mas, assim que conhecem os preços, acabam dando prioridade e escolhendo imóveis com espaços mais compactos.
+ * não costumam ter mais de dois quartos e buscam sempre a otimização do espaço
+ * 2) Familia crescendo -> 40 a 50
+ * 3) Aposentado -> 50 a 65
+ * 4) Divorciados -> 40 a 50
+ * 
+ * Qual sua idade -> input obrigatório
+ * O que mais você se identifica para seu estilo de vida: 
+ ["qualidade de vida",  "espaço para recreação em familia",  "Comércios próximos",  "espaço para churrasco e amigos",  "Segurança/Condominio fechado",  "ar-livre", 
+ "moradores próximos",  "Sem moradores próximos",  "vias próximas",  "Casa Grande",  "animais de estimação",  "passar momentos tranquilos em casal",  "busca de novas oportunidades", 
+ "Igrejas próximas",  "ouvir música alta",  "perto de avenidas movimentadas"  "Primeira Residencia", "Lugar calmo e tranquilo", "localização", "espaço para exercitar" ]
+ * 
+ * quantidade de imóveis visitados antes da compra:
+ * até 3 50%
+ * 4 a 5 25%
+ * 
+ * https://g1.globo.com/economia/noticia/2022/02/22/localizacao-preco-e-indicacao-de-amigos-as-preferencias-do-brasileiro-ao-comprar-imoveis.ghtml
+ *
+ * 
+ * filtro de ordenação -> organizar pelo valor do menor para o maio
+ * Quando a pessoa terminar de ver todo conteúdo separar as casas tipo super match do tinder
+
+
+ * 
+ */
+
+
+
+// if (checkbox.includes(element) && counter == 0) {
+//                         counter++
+//                         return (
+//                             `
+//                             <div class="col-md-4">
+//                                 <div class="card">
+//                                     <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
+//                                     <div class="card-body">
+//                                         <h5 class="card-title">${item.title}</h5>
+//                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+//                                         This content is a little bit longer.</p>
+//                                     </div>
+//                                     <div class="card-footer">
+//                                         <div class="divisor">
+//                                             <small class="text-muted me-3" id="room"><img src="svg/bed-front.svg" width="16" class="me-2"/>${item.room} quarto${item.room > 1 ? "s" : ""}</small>
+//                                             ${item.suite > 0 ? '<small class="text-muted me-3" id="suite"><img src="svg/bed-front.svg" width="16" class="me-2"/>${item.suite} suíte</small>' : ""}
+//                                             <small class="text-muted me-3" id="bathroom"><img src="svg/bed-front.svg" width="16" class="me-2"/>${item.bathroom} banheiro${item.bathroom > 1 ? "s" : ""}</small>
+//                                             <small class="text-muted me-3" id="garage"><img src="svg/garage-car.svg" width="16" class="me-2"/>${item.garage} carro${item.garage > 1 ? "s" : ""}</small>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                                 `
+//                         )
+
+//                     }

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link href="css/style-custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="container-fluid g-0 c-home">
+      <!--logo-->
+      <div class="logo">
+        <span><a href="https://lellyoliver.tk/algoritmo-casas/index.html"
+            class="text-white text-decoration-none">Company Lelly</a></span>
+      </div>
+      <div class="header">
+        <!--nome da pessoa-->
+        <div class="mb-3" id="divLead">
+          <div class="text-lead">
+            <label for="" class="form-label">Seu nome</label>
+            <input type="text" class="form-control" name="nameLead" id="nameLead" onkeyup="validInput()" value="Lelly">
+          </div>
+
+        </div>
+        <div class="mb-3" id="data-name"></div>
+
+        <!--checkboxs-->
+        <div class="row d-none" id="checks">
+          <div class="col-md-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="qualidade de vida" name="tag[]" id="qualidade">
+              <label for="qualidade">Qualidade de Vida</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="espaco para recreacao em familia" name="tag[]"
+                id="espaco-recrea">
+              <label for="espaco-recrea">Espaço para recreação em família</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="comercios proximos" name="tag[]"
+                id="comercio-prox">
+              <label for="comercio-prox">Comércios próximos</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="espaco para churrasco e amigos" name="tag[]"
+                id="espaco-churrasco">
+              <label for="espaco-churrasco">Espaço para churrasco e amigos</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="seguranca" name="tag[]" id="seguranca">
+              <label for="seguranca">Segurança</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="condominio" name="tag[]" id="condominio">
+              <label for="condominio">condomínio</label></input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="ar livre" name="tag[]" id="ar-livre">
+              <label for="ar-livre">Ar-livre</label>
+
+              </input>
+
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="moradores proximos" name="tag[]"
+                id="moradores-prox">
+              <label for="moradores-prox">Moradores próximos</label>
+
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="sem moradores proximos" name="tag[]"
+                id="sem-moradores-prox">
+              <label for="sem-moradores-prox">Sem moradores próximos</label></input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="vias proximas" name="tag[]" id="vias-prox">
+              <label for="vias-prox">Vias próximas</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="casa grande" name="tag[]" id="casa-grande">
+              <label for="casa-grande">Casa grande</label>
+              </input>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="animal de estimacao" name="tag[]" id="animais">
+              <label for="animais">Animal de estimação</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="passar momentos tranquilos em casal" name="tag[]"
+                id="momentos-casal">
+              <label for="momentos-casal">Passar momentos tranquilos em casal</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="busca de novas oportunidades" name="tag[]"
+                id="oportunidades">
+              <label for="oportunidades">Busca de novas oportunidades</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="igrejas proximas" name="tag[]" id="igrejas">
+              <label for="igrejas">Igrejas próximas</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="ouvir musica alta" name="tag[]" id="musica-alta">
+              <label for="musica-alta">Ouvir música alta</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="perto de avenidas movimentadas" name="tag[]"
+                id="avenidas">
+              <label for="avenidas">Perto de avenidas movimentadas</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="primeira casa" name="tag[]" id="primeira-casa">
+              <label for="primeira-casa">Primeira casa</label></input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="lugar calmo e tranquilo" name="tag[]"
+                id="lugar-calmo">
+              <label for="lugar-calmo">Lugar calmo e tranquilo</label>
+              </input>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="localizacao" name="tag[]" id="localizacao">
+              <label for="localizacao">Localização</label>
+              </input>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="espaco para exercitar" name="tag[]"
+                id="espaco-exercitar">
+              <label for="espaco-exercitar">Espaço para exercitar</label>
+              </input>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="pracas proximas" name="tag[]" id="pracas-prox">
+              <label for="pracas-prox">Praças próximas</label>
+              </input>
+            </div>
+
+          </div>
+        </div>
+
+        <!--Botões de envios-->
+        <button id="next" class="btn btn-primary mt-3" type="button" onclick="nextBtn()">NEXT</button>
+        <div class="row">
+          <div class="col-md-4">
+            <button id="finish" class="btn btn-primary mt-3 d-none" type="button"
+              onclick="finishBtn()">FINALIZAR</button>
+          </div>
+          <div class="col-md-6" id="data-aviso"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid g-0 c-list">
+      <div class="row">
+        <div id="data-list"></div>
+      </div>
+      <!--div com os matchs dinâmicos-->
+      <div class="row d-none" id="data-page">
+        <p>teste</p>
+      </div>
+
+    </div>
+    <!--conteudo dinâmico-->
+  </div>
+  <!-- Bootstrap JavaScript Libraries -->
+
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
