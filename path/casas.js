@@ -1,21 +1,5 @@
 const casas = [
-    {
-        "id": "1",
-        "img": "https://www.biotecdermo.com.br/wp-content/uploads/2016/10/sem-imagem-10.jpg",
-        "tipo": "Casa",
-        "title": "Casa bonita 01",
-        "local": "Rua 1, centro - Itatiba/SP",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed arcu at tellus ullamcorper volutpat. ",
-        "metros": "140m2",
-        "banheiros": 2,
-        "garagem": 2,
-        "url": "#linkaqui",
-        "tag": [
-            "qualidade de vida",
-            "espaço para recreação em familia",
-            "Comércios próximos"
-        ]
-    },
+   
     {
         "id": "2",
         "img": "https://www.biotecdermo.com.br/wp-content/uploads/2016/10/sem-imagem-10.jpg",
