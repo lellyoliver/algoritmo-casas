@@ -10,6 +10,25 @@ h3{
 h4{
    color:white;
 }
+<<<<<<< HEAD
+=======
+.callout {
+   padding: 10px;
+   border-top-color: rgb(170, 170, 170);
+   border-top-style: solid;
+   border-top-width: 1px;
+   border-right-color: rgb(170, 170, 170);
+   border-right-style: solid;
+   border-right-width: 1px;
+   border-bottom-color: rgb(170, 170, 170);
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+   border-left-color: rgb(239 91 91);
+   border-left-style: solid;
+   border-left-width: 3px;
+   background-color: white;
+}
+>>>>>>> 81500df6d6f012b6c493bf67de1d5af9c4428265
 
 img.filter-svg {
    filter: contrast(0.45);

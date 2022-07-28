@@ -171,9 +171,15 @@ function validButton(select) {
     const toasts = (select) => {
         return (
             `
+<<<<<<< HEAD
             <div class="alert alert-danger" role="alert">
                <b>Aviso!</b> Selecione uma das checkbox acima.
             </div>git 
+=======
+            <div class="callout mt-3">
+               <span><b>Aviso!</b> Selecione uma das checkbox acima.</span>
+            </div>
+>>>>>>> 81500df6d6f012b6c493bf67de1d5af9c4428265
                                     `
         )
 
