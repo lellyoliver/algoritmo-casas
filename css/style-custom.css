@@ -15,7 +15,7 @@ img.filter-svg {
    filter: contrast(0.45);
 }
 
-.logo {
+#logo {
    background-color: red;
    width: 150px;
    padding: 10px;
@@ -30,19 +30,6 @@ img.filter-svg {
    color:white;
 }
 
-.c-home{
-   background-color:#000;
-   --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * 1.5);
-    padding-left: calc(var(--bs-gutter-x) * 1.5);
-    padding-top: 20px;
-    padding-bottom: 30px;
-
-}
-
-
 .header{
    margin-top:30px;
 }
@@ -54,15 +41,4 @@ img.filter-svg {
 
 label{
    color:white;
-}
-
-.c-list{
-   background-color:#000;
-   --bs-gutter-x: 1.5rem;
-    width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * 1.5);
-    padding-left: calc(var(--bs-gutter-x) * 1.5);
-    padding-top: 20px;
-    padding-bottom: 30px;
-
 }
