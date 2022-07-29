@@ -77,7 +77,7 @@ function finishBtn() {
 /**function principal com a request json*/
 
 async function loadHouse() {
-    const response = await fetch("https://lellyoliver.tk/algoritmo-casas/path/casas.json", {
+    const response = await fetch("http://lellyoliver.tk/algoritmo-casas/path/casas.json", {
         method: 'GET',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' }
@@ -103,7 +103,7 @@ function perfil(checkbox) {
                         counter++
                         return (
                             `
-                            <div class="col-md">
+                            <div class="col-md-4">
                                 <div class="card">
                                     <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
                                     <div class="card-body">
@@ -173,7 +173,7 @@ function validButton(select) {
             `
             <div class="alert alert-danger" role="alert">
                <b>Aviso!</b> Selecione uma das checkbox acima.
-            </div>git 
+            </div>
 
                                     `
         )
