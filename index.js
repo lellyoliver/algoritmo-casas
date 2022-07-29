@@ -26,27 +26,37 @@ function nameLead(nameValue) {
 /********************************************************************/
 
 /**botões*/
+function startBtn(){
+    const start = document.getElementById('start')
+    const leadBox = document.getElementById('lead')
+    start.classList.add('d-none')
+    leadBox.classList.remove('d-none')
+}
 
 function nextBtn() {
     const nameLead = document.getElementById("nameLead")
     const nameValue = nameLead.value
     if (nameValue != "") {
         //buttons ~ divs
-        const next = document.getElementById('next')
         const finish = document.getElementById('finish')
         const checks = document.getElementById('checks')
-        const divName = document.getElementById('divLead')
+        const divName = document.getElementById('name-lead')
+        const containerHead = document.querySelector('.container-head')
 
         //remove
         finish.classList.remove("d-none")
         checks.classList.remove("d-none")
 
         //insere
-        next.remove()
+
         divName.remove()
 
         //adicionar o nome na proxima "pagina"
         this.nameLead(nameValue)
+
+        //alteração tamanho da height
+        containerHead.style.height = "100%";
+
     } else {
         nameLead.classList.add("is-invalid")
         nameLead.focus()
@@ -194,3 +204,4 @@ function validItens(id, placeHouse, img, placeName) {
     }
 
 }
+

@@ -10,39 +10,70 @@
 
   <!-- Bootstrap CSS v5.2.0-beta1 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
   <link href="css/style-custom.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+
 
 </head>
 
 <body>
-  <div class="main" id="head">
-    <div class="container">
+  <div class="container-head">
+    <!--head-->
+    <div class="container p-head">
       <div class="row">
-        <div class="col-md-4" id="logo">
+        <div class="col-2" id="logo">
           <a href="#" class="text-white text-decoration-none"><img src="" title="logo" alt="" /></a>
         </div>
-        <div class="col-5 float-end">
-          <ul class="list-inline">
-            <li class="list-inline-item" id="local" >Rua Eugenio Passos, 106 - Centro<br>
-              Itatiba/SP</li>
-            <li class="list-inline-item" id="whatsapp">+5511933280171</li>
+        <div class="col d-flex align-items-center" id="local">
+          <ul class="list-inline m-0">
+            <li class="list-inline-item"><i class="fa fa-solid fa-location-dot"></i>Rua Eugenio passos, 106 - Centro
+            </li>
+          </ul>
+        </div>
+        <div class="col d-flex justify-content-end align-items-center mx-auto p-0" id="tel">
+          <ul class="list-inline m-0">
+            <li class="list-inline-item"><i class="fa fa-brands fa-square-whatsapp"></i>(11) 93328017</li>
           </ul>
         </div>
       </div>
-      <!--logo-->
+    </div>
+    <!--/head-->
+    <!---apresentação-->
+    <div class="container pt-50">
+      <div class="box-lead">
+        <div id="home-lead">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus libero mauris, pretium in justo non, pretium tristique nisl.</h3>
+          <div>
+            <button id="start" class="btn btn-primary mt-3" type="button" onclick="startBtn()">Comece Agora</button>
+          </div>
+        </div>
 
-
-      <!--nome da pessoa-->
-      <div class="text-lead">
-        <label for="" class="form-label">Seu nome</label>
-        <input type="text" class="form-control" name="nameLead" id="nameLead" onkeyup="validInput()" value="Lelly">
       </div>
+    </div>
 
-      <div class="mb-3" id="data-name"></div>
+    <!--nome da pessoa-->
+    <div class="container pt-50 d-none" id="lead">
+      <div class="box-lead">
+        <div id="name-lead">
+          <label for="" class="form-label">Seu nome</label>
+          <input type="text" class="form-control form-lead" name="nameLead" id="nameLead" onkeyup="validInput()"
+            value="Lelly">
+            <div>
+              <button id="next" class="btn btn-primary mt-3" type="button" onclick="nextBtn()">Próximo</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="container">
 
       <!--checkboxs-->
       <div class="row d-none" id="checks">
+        <div class="mb-3" id="data-name"></div>
+
         <div class="col-md-6">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="qualidade de vida" name="tag[]" id="qualidade">
@@ -184,46 +215,31 @@
             <label for="pracas-prox">Praças próximas</label>
             </input>
           </div>
-
         </div>
-      </div>
-      <!--Botões de envios-->
-      <div class="row">
-        <div class="col-md-3">
-          <button id="next" class="btn btn-primary mt-3" type="button" onclick="nextBtn()">NEXT</button>
-          <button id="finish" class="btn btn-primary mt-3 d-none" type="button" onclick="finishBtn()">FINALIZAR</button>
-          <div id="data-aviso"></div>
+        <div>
+          <button id="finish" class="btn btn-primary mt-3 d-none" type="button" onclick="finishBtn()">Finalizar</button>
         </div>
-
-      </div>
-
-      <div class="container-fluid g-0 c-list">
-        <div class="row" id="data-list">
-        </div>
-        <!--div com os matchs dinâmicos-->
-        <div class="row d-none" id="data-page">
-          <p>teste</p>
-        </div>
-
       </div>
     </div>
-    <div class="container-fluid g-0 c-list">
-      <div id="data-list row"></div>
 
-      <!--div com os matchs dinâmicos-->
-      <div class="row d-none" id="data-page">
-        <p>teste</p>
-      </div>
-
+    <div id="data-aviso"></div>
+  </div>
+  <div class="container">
+    <div class="row" id="data-list">
     </div>
-    <!--conteudo dinâmico-->
+    <!--div com os matchs dinâmicos-->
+    <div class="row d-none" id="data-page">
+      <p>teste</p>
+    </div>
+  </div>
+  <!--conteudo dinâmico-->
 
 
-    <!-- Bootstrap JavaScript Libraries -->
+  <!-- Bootstrap JavaScript Libraries -->
 
-    <script src="./index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
