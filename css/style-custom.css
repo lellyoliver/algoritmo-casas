@@ -2,13 +2,13 @@ p {
    font-size: 14px;
 }
 h2{
-   color:white;
+   color:black;
 }
 h3{
-   color:white;
+   color:black;
 }
 h4{
-   color:white;
+   color:black;
 }
 
 img.filter-svg {
@@ -27,7 +27,7 @@ img.filter-svg {
 
 .logo > span{
    margin:0 auto;
-   color:white;
+   color:black;
 }
 
 .header{

@@ -3,7 +3,7 @@
 
 <head>
   <title>Live Residennce</title>
-  
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,20 +19,19 @@
   <div class="main" id="head">
     <div class="container">
       <div class="row">
-        <div class="col-4" id="logo">
-          <span><a href="#" class="text-white text-decoration-none"><img src="" title="logo" alt="" /></a></span>
+        <div class="col-md-4" id="logo">
+          <a href="#" class="text-white text-decoration-none"><img src="" title="logo" alt="" /></a>
         </div>
-        <div class="col-4" id="local">
-          <p>Rua Eugenio Passos, 106 - Centro<br>
-              Itatiba/SP</p>
+        <div class="col-5 float-end">
+          <ul class="list-inline">
+            <li id="local">Rua Eugenio Passos, 106 - Centro<br>
+              Itatiba/SP</li>
+            <li>+5511933280171</li>
+          </ul>
         </div>
-        <div class="col-4" id="tel">
-          <a>(11) 93328-0171</a>
-        </div>
-
       </div>
       <!--logo-->
-      
+
 
       <!--nome da pessoa-->
       <div class="text-lead">
@@ -190,38 +189,41 @@
       </div>
       <!--Botões de envios-->
       <div class="row">
-        <button id="next" class="btn btn-primary mt-3" type="button" onclick="nextBtn()">NEXT</button>
-        <button id="finish" class="btn btn-primary mt-3 d-none" type="button" onclick="finishBtn()">FINALIZAR</button>
-        <div id="data-aviso"></div>
+        <div class="col-md-3">
+          <button id="next" class="btn btn-primary mt-3" type="button" onclick="nextBtn()">NEXT</button>
+          <button id="finish" class="btn btn-primary mt-3 d-none" type="button" onclick="finishBtn()">FINALIZAR</button>
+          <div id="data-aviso"></div>
+        </div>
+
       </div>
 
-    <div class="container-fluid g-0 c-list"> 
+      <div class="container-fluid g-0 c-list">
         <div class="row" id="data-list">
         </div>
+        <!--div com os matchs dinâmicos-->
+        <div class="row d-none" id="data-page">
+          <p>teste</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid g-0 c-list">
+      <div id="data-list row"></div>
+
       <!--div com os matchs dinâmicos-->
       <div class="row d-none" id="data-page">
         <p>teste</p>
       </div>
 
     </div>
-  </div>
-  <div class="container-fluid g-0 c-list">
-    <div id="data-list row"></div>
-
-    <!--div com os matchs dinâmicos-->
-    <div class="row d-none" id="data-page">
-      <p>teste</p>
-    </div>
-
-  </div>
-  <!--conteudo dinâmico-->
+    <!--conteudo dinâmico-->
 
 
-  <!-- Bootstrap JavaScript Libraries -->
+    <!-- Bootstrap JavaScript Libraries -->
 
-  <script src="./index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
