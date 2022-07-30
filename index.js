@@ -95,7 +95,7 @@ function finishBtn() {
 /**function principal com a request json*/
 
 async function loadHouse() {
-    const response = await fetch("https://lellyoliver.tk/algoritmo-casas/path/casas.json", {
+    const response = await fetch("https://lellyoliver.github.io/algoritmo-casas/path/casas.json", {
         method: 'GET',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' }
