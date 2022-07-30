@@ -61,14 +61,12 @@ img.filter-svg {
 
 /**lead**/
 .box-lead {
-   padding: 30px 20px;
+   padding: 50px 50px;
    border-radius: 8px;
    border: 1px solid #fff;
-   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-   /* Note: currently only Safari supports backdrop-filter */
+   box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
    /* backdrop-filter: blur(29px);
    --webkit-backdrop-filter: blur(29px); */
-   /* background-color: rgba(255, 255, 255, 0.12); */
    background-color: #fff;
    width: 50%;
 }
