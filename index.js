@@ -28,7 +28,7 @@ function nameLead(nameValue) {
 /**botões*/
 function startBtn(){
     const start = document.getElementById('start')
-    const leadBox = document.getElementById('lead')
+    const leadBox = document.getElementById('name-lead')
     start.classList.add('d-none')
     leadBox.classList.remove('d-none')
 }
@@ -41,21 +41,18 @@ function nextBtn() {
         const finish = document.getElementById('finish')
         const checks = document.getElementById('checks')
         const divName = document.getElementById('name-lead')
-        const containerHead = document.querySelector('.container-head')
+        const homeTxt = document.getElementById('home-lead')
 
         //remove
         finish.classList.remove("d-none")
         checks.classList.remove("d-none")
 
         //insere
-
         divName.remove()
+        homeTxt.remove()
 
         //adicionar o nome na proxima "pagina"
         this.nameLead(nameValue)
-
-        //alteração tamanho da height
-        containerHead.style.height = "100%";
 
     } else {
         nameLead.classList.add("is-invalid")
@@ -75,9 +72,17 @@ function finishBtn() {
     if (selects == "") {
         //valida se é vazio
         validButton(selects)
+        
     } else {
         //printa na function principal do algoritmo
         perfil(selects)
+        //alteração tamanho da height
+        const containerHead = document.querySelector('.container-head')
+        containerHead.style.height = "100%";
+
+        const avisoId = document.getElementById('data-aviso')
+        avisoId.classList.add('d-none')
+
     }
 }
 
