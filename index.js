@@ -83,6 +83,9 @@ function finishBtn() {
         const avisoId = document.getElementById('data-aviso')
         avisoId.classList.add('d-none')
 
+        //remover a box
+        document.querySelector(".box-lead").remove()
+
     }
 }
 
