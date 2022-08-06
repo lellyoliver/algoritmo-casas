@@ -74,12 +74,8 @@ function finishBtn() {
         validButton(selects)
 
     } else {
-        let firstItems = selects.slice(0, 4)
-
-        perfil(firstItems);
-        console.log(firstItems)
-        console.log(selects)
-    
+        let funcTeste = perfil(selects)
+        funcTeste.slice(0,4)
 
         // const showMoreBtn = document.querySelector('.products-btn')
         // let currentItems = 0
