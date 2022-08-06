@@ -75,7 +75,7 @@ function finishBtn() {
         
     } else {
         //printa na function principal do algoritmo
-        perfil(selects)
+        displayNextFour();
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -89,73 +89,6 @@ function finishBtn() {
     }
 }
 
-
-/********************************************************************/
-
-/**function principal com a request json*/
-
-async function loadHouse() {
-    const response = await fetch("https://lellyoliver.github.io/algoritmo-casas/path/casas.json", {
-        method: 'GET',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' }
-    })
-        .then(response => { return response.json() })
-        .catch(error => { console.error(error) })
-
-    return response
-}
-
-/**function de recebimento da json */
-
-function perfil(checkbox) {
-    loadHouse().then((casas) => {
-        const listComponent = (casas) => {
-
-            //cria um array
-            return casas.map((item) => {
-                let tag = item.tag;
-                let counter = 0
-                return tag.map((element) => {
-                    if (checkbox.includes(element) && counter == 0) {
-                        counter++
-                        return (
-                            `
-                            <div class="col-md-4 mb-3">
-                                <div class="card">
-                                    <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
-                                    <div class="card-body">
-                                        <span class="badge bg-primary mb-2">${item.category}</span>
-                                        <h5 class="card-title">${item.title}</h5>
-                                        <p class="card-text">${item.adress}</p>
-                                        <p class="card-text mt-4 fw-bolder fs-6">${item.price}</p>
-                                        <a href="${item.urlLink}" role="submit" class="btn btn-primary btn-sm col-12" id="view-more">Ver mais</a>
-
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="divisor divisor d-flex justify-content-center">
-                                            ${validItens("room", item.room, "bed-individual", "quarto")}
-                                            ${validItens("suite", item.suite, "bed-front", "suíte")}
-                                            ${validItens("bathroom", item.bathroom, "bath", "banheiro")}
-                                            ${validItens("garage", item.garage, "garage-car", "carro")}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                                `
-                        )
-
-                    }
-
-
-                }).join('')
-            }).join('')
-        }
-        const dataList = document.getElementById('data-list')
-        dataList.innerHTML = listComponent(casas)
-    })
-    return { checkbox }
-}
 
 /********************************************************************/
 
@@ -202,7 +135,75 @@ function validButton(select) {
 }
 
 
-function validItens(id, placeHouse, img, placeName) {
+
+/********************************************************************/
+
+/**function principal com a request json*/
+
+async function loadHouse() {
+    const response = await fetch("https://lellyoliver.github.io/algoritmo-casas/path/casas.json", {
+        method: 'GET',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then(response => { return response.json() })
+        .catch(error => { console.error(error) })
+
+    return response
+}
+
+/**function de recebimento da json */
+
+function perfil(checkbox) {
+    loadHouse().then((casas) => {
+        const listComponent = (casas) => {
+
+            //cria um array
+            return casas.map((item) => {
+                let tag = item.tag;
+                let counter = 0
+                return tag.map((element) => {
+                    if (checkbox.includes(element) && counter == 0) {
+                        counter++
+                        return (
+                            `
+                            <div class="col-md-4 mb-3">
+                                <div class="card">
+                                    <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
+                                    <div class="card-body">
+                                        <span class="badge bg-primary mb-2">${item.category}</span>
+                                        <h5 class="card-title">${item.title}</h5>
+                                        <p class="card-text">${item.adress}</p>
+                                        <p class="card-text mt-4 fw-bolder fs-6">${item.price}</p>
+                                        <a href="${item.urlLink}" role="submit" class="btn btn-primary btn-sm col-12" id="view-more">Ver mais</a>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="divisor divisor d-flex justify-content-center">
+                                            ${pushItems("room", item.room, "bed-individual", "quarto")}
+                                            ${pushItems("suite", item.suite, "bed-front", "suíte")}
+                                            ${pushItems("bathroom", item.bathroom, "bath", "banheiro")}
+                                            ${pushItems("garage", item.garage, "garage-car", "carro")}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                `
+                        )
+
+                    }
+
+
+                }).join('')
+            }).join('')
+        }
+        const dataList = document.getElementById('data-list')
+        dataList.innerHTML = listComponent(casas)
+    })
+    return { checkbox }
+}
+
+function pushItems(id, placeHouse, img, placeName) {
     const placeAdd = `<small class="text-muted me-3" id="${id}"><img src="svg/${img}.svg" width="15" class="me-2 filter-svg" />${placeHouse} ${placeName}${placeHouse > 1 ? "s" : ""}</small>`
 
     if (placeHouse > 0) {
@@ -213,3 +214,28 @@ function validItens(id, placeHouse, img, placeName) {
 
 }
 
+
+/**Limitar numero de items */
+
+const showMoreBtn = document.querySelector('.products-btn');
+
+let currentItems = 0;
+
+const displayNextFour = () => {
+    perfil(products.slice(currentItems, currentItems + 4));
+    // Display next 4 items until their amount exceeds 
+    // the array length 
+    if (!(currentItems + 4 > products.length)) {
+        currentItems += 4;
+    }
+    // Remove event listener from 'Show more' button and
+    // hide it after all items from the array are displayed
+    if (currentItems === products.length) {
+        showMoreBtn.removeEventListener('click', displayNextFour);
+        showMoreBtn.style.display = 'none';
+    }
+};
+
+
+
+showMoreBtn.addEventListener('click', displayNextFour);
