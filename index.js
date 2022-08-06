@@ -95,8 +95,6 @@ function finishBtn() {
         displayNextFour();
 
         showMoreBtn.addEventListener('click', displayNextFour);
-        //printa na function principal do algoritmo
-        perfil(selects)
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
