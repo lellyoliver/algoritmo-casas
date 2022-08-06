@@ -26,7 +26,7 @@ function nameLead(nameValue) {
 /********************************************************************/
 
 /**botões*/
-function startBtn(){
+function startBtn() {
     const start = document.getElementById('start')
     const leadBox = document.getElementById('name-lead')
     start.classList.add('d-none')
@@ -72,8 +72,29 @@ function finishBtn() {
     if (selects == "") {
         //valida se é vazio
         validButton(selects)
-        
+
     } else {
+
+        const showMoreBtn = document.querySelector('.products-btn');
+        let currentItems = 0;
+        const displayNextFour = () => {
+            perfil(selects.slice(currentItems, currentItems + 4));
+            // Display next 4 items until their amount exceeds 
+            // the array length 
+            if (!(currentItems + 4 > selects.length)) {
+                currentItems += 4;
+            }
+            // Remove event listener from 'Show more' button and
+            // hide it after all items from the array are displayed
+            if (currentItems === selects.length) {
+                showMoreBtn.removeEventListener('click', displayNextFour);
+                showMoreBtn.style.display = 'none';
+            }
+        };
+
+        displayNextFour();
+
+        showMoreBtn.addEventListener('click', displayNextFour);
         //printa na function principal do algoritmo
         perfil(selects)
         //alteração tamanho da height
