@@ -74,27 +74,32 @@ function finishBtn() {
         validButton(selects)
 
     } else {
+        let firstItems = selects.slice(0, 4);
 
-        const showMoreBtn = document.querySelector('.products-btn');
-        let currentItems = 0;
-        const displayNextFour = () => {
-            perfil(selects.slice(currentItems, currentItems + 4));
-            // Display next 4 items until their amount exceeds 
-            // the array length 
-            if (!(currentItems + 4 > selects.length)) {
-                currentItems += 4;
-            }
-            // Remove event listener from 'Show more' button and
-            // hide it after all items from the array are displayed
-            if (currentItems === selects.length) {
-                showMoreBtn.removeEventListener('click', displayNextFour);
-                showMoreBtn.style.display = 'none';
-            }
-        };
+        perfil(firstItems);
 
-        displayNextFour();
+        // const showMoreBtn = document.querySelector('.products-btn')
+        // let currentItems = 0
+        // const displayNextFour = () => {
+        //     perfil(selects.slice(currentItems, currentItems + 4))
+        //     // Display next 4 items until their amount exceeds 
+        //     // the array length 
+        //     if (!(currentItems + 4 > selects.length)) {
+        //         currentItems += 4
+        //     }
+        //     // Remove event listener from 'Show more' button and
+        //     // hide it after all items from the array are displayed
+        //     if (currentItems === selects.length) {
+        //         showMoreBtn.removeEventListener('click', displayNextFour)
+        //         showMoreBtn.style.display = 'none'
+        //     }
+        // };
 
-        showMoreBtn.addEventListener('click', displayNextFour);
+        // displayNextFour();
+
+        // showMoreBtn.addEventListener('click', displayNextFour);
+
+
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
