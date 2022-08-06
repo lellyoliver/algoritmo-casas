@@ -77,28 +77,6 @@ function finishBtn() {
         perfil(selects)
         console.log(perfil(selects).length)
 
-        // const showMoreBtn = document.querySelector('.products-btn')
-        // let currentItems = 0
-        // const displayNextFour = () => {
-        //     perfil(selects.slice(currentItems, currentItems + 4))
-        //     // Display next 4 items until their amount exceeds 
-        //     // the array length 
-        //     if (!(currentItems + 4 > selects.length)) {
-        //         currentItems += 4
-        //     }
-        //     // Remove event listener from 'Show more' button and
-        //     // hide it after all items from the array are displayed
-        //     if (currentItems === selects.length) {
-        //         showMoreBtn.removeEventListener('click', displayNextFour)
-        //         showMoreBtn.style.display = 'none'
-        //     }
-        // };
-
-        // displayNextFour();
-
-        // showMoreBtn.addEventListener('click', displayNextFour);
-
-
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -188,6 +166,8 @@ function perfil(checkbox) {
                 return tag.map((element) => {
                     if (checkbox.includes(element) && counter == 0) {
                         counter++
+                        console.log(element.length)
+                        console.log(element.slice(0,4))
                         return (
                             `
                             <div class="col-md-4 mb-3">
