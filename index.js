@@ -75,7 +75,7 @@ function finishBtn() {
         
     } else {
         //printa na function principal do algoritmo
-        displayNextFour();
+        perfil(selects)
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -213,29 +213,3 @@ function pushItems(id, placeHouse, img, placeName) {
     }
 
 }
-
-
-/**Limitar numero de items */
-
-const showMoreBtn = document.querySelector('.products-btn');
-
-let currentItems = 0;
-
-const displayNextFour = () => {
-    perfil(products.slice(currentItems, currentItems + 4));
-    // Display next 4 items until their amount exceeds 
-    // the array length 
-    if (!(currentItems + 4 > products.length)) {
-        currentItems += 4;
-    }
-    // Remove event listener from 'Show more' button and
-    // hide it after all items from the array are displayed
-    if (currentItems === products.length) {
-        showMoreBtn.removeEventListener('click', displayNextFour);
-        showMoreBtn.style.display = 'none';
-    }
-};
-
-
-
-showMoreBtn.addEventListener('click', displayNextFour);
