@@ -74,8 +74,8 @@ function finishBtn() {
         validButton(selects)
 
     } else {
-        let funcTeste = perfil(selects)
-        funcTeste.slice(0,4)
+        perfil(selects)
+        console.log(perfil(selects).length)
 
         // const showMoreBtn = document.querySelector('.products-btn')
         // let currentItems = 0
