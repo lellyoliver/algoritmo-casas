@@ -75,8 +75,7 @@ function finishBtn() {
 
     } else {
         perfil(selects)
-        console.log(perfil(selects).length)
-
+        window.onload = moreList();
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -166,11 +165,9 @@ function perfil(checkbox) {
                 return tag.map((element) => {
                     if (checkbox.includes(element) && counter == 0) {
                         counter++
-                        console.log(element.length)
-                        console.log(element.slice(0,4))
                         return (
                             `
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3 hide-house">
                                 <div class="card">
                                     <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
                                     <div class="card-body">
@@ -216,3 +213,27 @@ function pushItems(id, placeHouse, img, placeName) {
     }
 
 }
+
+/*** more list */
+
+function moreList(){
+    var cont = 0;
+    var items = document.querySelectorAll(".hide-house");
+    var itemsNone = document.querySelectorAll(".d-none");
+  
+    if (itemsNone.length > 0) {
+      items.forEach(item => item.classList.remove("d-none"));
+    }
+    else {
+      items.forEach(item => {
+        if (cont < 4 || cont == items.length-1) {
+        }
+        else{
+          item.classList.add("d-none");
+        }
+        cont++;
+      });
+    }
+  }
+  
+   
