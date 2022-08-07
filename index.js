@@ -75,7 +75,6 @@ function finishBtn() {
 
     } else {
         perfil(selects)
-        window.onload = moreList();
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -235,5 +234,6 @@ function moreList(){
       });
     }
   }
+  window.onload = moreList();
   
    
