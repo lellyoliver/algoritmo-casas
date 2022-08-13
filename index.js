@@ -77,7 +77,6 @@ function finishBtn() {
         const classCardHouse = document.querySelectorAll('.card-house')
         const btnHouse = document.querySelector('.btn-house')
         let currentImg = 2
-        btnHouse.
             for(let i = currentImg; i < currentImg + 2; i++) {
             if (classCardHouse[i]) {
                 perfil(selects)
