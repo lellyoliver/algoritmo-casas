@@ -74,23 +74,12 @@ function finishBtn() {
         validButton(selects)
 
     } else {
-        const classCardHouse = document.querySelectorAll('.card-house')
-        const btnHouse = document.querySelector('.btn-house')
-        let currentImg = 2
-            for(let i = currentImg; i < currentImg + 2; i++) {
-            if (classCardHouse[i]) {
-                perfil(selects)
-                classCardHouse[i].style.display = "block"
-                console.log('TESTE');
-            }
+        const p = perfil(selects)
+        for(const i = 0; i = perfil(selects).lenght; i++ ){
+            console.log(p[i]);
         }
-        currentImg += 2
-        if (currentImg >= classCardHouse.length) {
-            event.target.style.display = "none"
-        }
-
         
-
+       
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -231,7 +220,20 @@ function pushItems(id, placeHouse, img, placeName) {
 
 /*** more list */
 
-const teste = () => {
-
+const btnMore = () =>{
+    const classCardHouse = document.querySelectorAll('.card-house')
+    const btnHouse = document.querySelector('.btn-house')
+    let currentImg = 2
+    for(let i = currentImg; i < currentImg + 2; i++){
+        if(classCardHouse[i]){
+            classCardHouse[i].style.display = "block"
+        }
+        console.log('TESTE');
+    }
+    currentImg += 2
+    if(currentImg >= classCardHouse.length){
+        event.target.style.display = "none"
+    }
 }
-
+  
+   
