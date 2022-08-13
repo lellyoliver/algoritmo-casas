@@ -219,14 +219,13 @@ function pushItems(id, placeHouse, img, placeName) {
 const btnMore = () =>{
     const classCardHouse = document.querySelectorAll('.card-house')
     const btnHouse = document.querySelector('.btn-house')
-    let currentImg = 2
-    for(let i = currentImg; i < currentImg + 2; i++){
+    for(let i = 0; i < currentImg + 3; i++){
         if(classCardHouse[i]){
             classCardHouse[i].style.display = "block"
         }
         console.log('TESTE');
     }
-    currentImg += 2
+    currentImg += 3
     if(currentImg >= classCardHouse.length){
         event.target.style.display = "none"
     }
