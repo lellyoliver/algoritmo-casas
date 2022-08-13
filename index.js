@@ -63,9 +63,6 @@ function nextBtn() {
 function finishBtn() {
     //pega a checkbox
     const checkbox = document.querySelectorAll("input[type='checkbox']")
-    const classCardHouse = document.querySelectorAll('.card-house')
-    const btnHouse = document.querySelector('.btn-house')
-    let currentImg = 2
     let selects = []
     for (var i = 0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
@@ -77,19 +74,24 @@ function finishBtn() {
         validButton(selects)
 
     } else {
-        perfil(selects)
-        for(let i = currentImg; i < currentImg + 2; i++){
-            if(classCardHouse[i]){
+        const classCardHouse = document.querySelectorAll('.card-house')
+        const btnHouse = document.querySelector('.btn-house')
+        let currentImg = 2
+        btnHouse.
+            for(let i = currentImg; i < currentImg + 2; i++) {
+            if (classCardHouse[i]) {
+                perfil(selects)
                 classCardHouse[i].style.display = "block"
+                console.log('TESTE');
             }
-            console.log('TESTE');
         }
         currentImg += 2
-        if(currentImg >= classCardHouse.length){
+        if (currentImg >= classCardHouse.length) {
             event.target.style.display = "none"
         }
+
         
-        
+
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -230,22 +232,7 @@ function pushItems(id, placeHouse, img, placeName) {
 
 /*** more list */
 
-// function moreList(selects){
-//     var cont = 0;
-//     var items = perfil(selects);
-//      if (items.length > 0) {
-//     }
-//     else {
-//       items.forEach(item => {
-//         if (cont < 4 || cont == items.length-1) {
-//         }
-//         else{
-//           item.classList.add("d-none");
-//         }
-//         cont++;
-//       });
-//     }
-//   }
-  
-  
-   
+const teste = () => {
+
+}
+
