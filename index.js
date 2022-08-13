@@ -65,7 +65,7 @@ function finishBtn() {
     const checkbox = document.querySelectorAll("input[type='checkbox']")
     const classCardHouse = document.querySelectorAll('.card-house')
     const btnHouse = document.querySelector('.btn-house')
-    let currentImg = 6
+    let currentImg = 2
     let selects = []
     for (var i = 0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
@@ -78,13 +78,13 @@ function finishBtn() {
 
     } else {
         perfil(selects)
-        for(let i = currentImg; i < currentImg + 6; i++){
+        for(let i = currentImg; i < currentImg + 2; i++){
             if(classCardHouse[i]){
                 classCardHouse[i].style.display = "block"
             }
             console.log('TESTE');
         }
-        currentImg += 3
+        currentImg += 2
         if(currentImg >= classCardHouse.length){
             event.target.style.display = "none"
         }
