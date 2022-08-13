@@ -78,14 +78,14 @@ function finishBtn() {
 
     } else {
         perfil(selects)
-        
         for(let i = currentImg; i < currentImg + 6; i++){
             if(classCardHouse[i]){
                 classCardHouse[i].style.display = "block"
             }
+            console.log('TESTE');
         }
         currentImg += 3
-        if(currentImg >= WebGLShaderPrecisionFormat.length){
+        if(currentImg >= classCardHouse.length){
             event.target.style.display = "none"
         }
         
