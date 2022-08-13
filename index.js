@@ -75,11 +75,7 @@ function finishBtn() {
 
     } else {
         const p = perfil(selects)
-        for(const i = 0; i = perfil(selects).lenght; i++ ){
-            console.log(p[i]);
-        }
-        
-       
+       console.log(p.length)
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
