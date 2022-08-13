@@ -63,6 +63,9 @@ function nextBtn() {
 function finishBtn() {
     //pega a checkbox
     const checkbox = document.querySelectorAll("input[type='checkbox']")
+    const classCardHouse = document.querySelectorAll('.card-house')
+    const btnHouse = document.querySelector('.btn-house')
+    let currentImg = 6
     let selects = []
     for (var i = 0; i < checkbox.length; i++) {
         if (checkbox[i].checked) {
@@ -75,6 +78,18 @@ function finishBtn() {
 
     } else {
         perfil(selects)
+        
+        for(let i = currentImg; i < currentImg + 6; i++){
+            if(classCardHouse[i]){
+                classCardHouse[i].style.display = "block"
+            }
+        }
+        currentImg += 3
+        if(currentImg >= WebGLShaderPrecisionFormat.length){
+            event.target.style.display = "none"
+        }
+        
+        
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -166,7 +181,7 @@ function perfil(checkbox) {
                         counter++
                         return (
                             `
-                            <div class="col-md-4 mb-3 hide-house">
+                            <div class="col-md-4 mb-3 card-house">
                                 <div class="card">
                                     <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
                                     <div class="card-body">
@@ -215,25 +230,22 @@ function pushItems(id, placeHouse, img, placeName) {
 
 /*** more list */
 
-function moreList(){
-    var cont = 0;
-    var items = document.querySelectorAll(".hide-house");
-    var itemsNone = document.querySelectorAll(".d-none");
+// function moreList(selects){
+//     var cont = 0;
+//     var items = perfil(selects);
+//      if (items.length > 0) {
+//     }
+//     else {
+//       items.forEach(item => {
+//         if (cont < 4 || cont == items.length-1) {
+//         }
+//         else{
+//           item.classList.add("d-none");
+//         }
+//         cont++;
+//       });
+//     }
+//   }
   
-    if (itemsNone.length > 0) {
-      items.forEach(item => item.classList.remove("d-none"));
-    }
-    else {
-      items.forEach(item => {
-        if (cont < 4 || cont == items.length-1) {
-        }
-        else{
-          item.classList.add("d-none");
-        }
-        cont++;
-      });
-    }
-  }
-  window.onload = moreList();
   
    
