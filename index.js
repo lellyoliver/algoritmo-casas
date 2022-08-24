@@ -74,8 +74,8 @@ function finishBtn() {
         validButton(selects)
 
     } else {
-        const p = perfil(selects)
-       console.log(p.length)
+        perfil(selects)
+
         //alteração tamanho da height
         const containerHead = document.querySelector('.container-head')
         containerHead.style.height = "100%";
@@ -213,22 +213,3 @@ function pushItems(id, placeHouse, img, placeName) {
     }
 
 }
-
-/*** more list */
-
-const btnMore = () =>{
-    const classCardHouse = document.querySelectorAll('.card-house')
-    const btnHouse = document.querySelector('.btn-house')
-    for(let i = 0; i < currentImg + 3; i++){
-        if(classCardHouse[i]){
-            classCardHouse[i].style.display = "block"
-        }
-        console.log('TESTE');
-    }
-    currentImg += 3
-    if(currentImg >= classCardHouse.length){
-        event.target.style.display = "none"
-    }
-}
-  
-   
