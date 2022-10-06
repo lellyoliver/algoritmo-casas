@@ -169,7 +169,6 @@ function perfil(checkbox) {
                             `
                             <div class="col-md-4 mb-3 card-house">
                                 <div class="card">
-                                    <!--<img src="${item.urlImage}" class="card-img-top" alt="${item.title}">-->
                                     <div class="card-body">
                                         <span class="badge bg-primary mb-2">${item.category}</span>
                                         <h5 class="card-title">${item.title}</h5>
