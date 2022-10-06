@@ -121,9 +121,12 @@ function validInput() {
 function validButton(select) {
     const toasts = (select) => {
         return (
-            `<div class="alert alert-danger" role="alert">
+            `
+            <div class="alert alert-danger" role="alert">
                <b>Aviso!</b> Selecione uma das checkbox acima.
-            </div>`
+            </div>
+
+                                    `
         )
 
     }
@@ -166,12 +169,14 @@ function perfil(checkbox) {
                             `
                             <div class="col-md-4 mb-3 card-house">
                                 <div class="card">
+                                    <img src="${item.urlImage}" class="card-img-top" alt="${item.title}">
                                     <div class="card-body">
                                         <span class="badge bg-primary mb-2">${item.category}</span>
                                         <h5 class="card-title">${item.title}</h5>
                                         <p class="card-text">${item.adress}</p>
                                         <p class="card-text mt-4 fw-bolder fs-6">${item.price}</p>
                                         <a href="${item.urlLink}" role="submit" class="btn btn-primary btn-sm col-12" id="view-more">Ver mais</a>
+
                                     </div>
                                     <div class="card-footer">
                                         <div class="divisor divisor d-flex justify-content-center">
