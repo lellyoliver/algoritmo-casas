@@ -30,7 +30,20 @@ if($("#inputText").val() == ""){
     
 }
 
-
+function loadHouse() {
+    const response = fetch("https://lellyoliver.github.io/algoritmo-casas/path/casas.json", {
+        method: 'GET',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then((response) => console.log(JSON.stringify(response)))
+        .then((data) => {
+            console.log(data.id)
+        })
+        .catch(error => { console.error(error) })
+    return response;
+}
+loadHouse()
 
 
 
